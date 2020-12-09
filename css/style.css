@@ -18,6 +18,11 @@ ul li:hover {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* fine regole generali */
 
 /* header */
@@ -32,7 +37,7 @@ header .logo {
   display: flex;
   align-items: center;
   /* DEBUG:  */
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 header .logo img {
@@ -46,7 +51,7 @@ nav {
   align-items: center;
   justify-content: flex-end;
   /* DEBUG:  */
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 nav ul {
@@ -85,6 +90,34 @@ nav ul li i {
 
 .tendina ul {
   list-style: none;
+}
+
+.user {
+  margin: 0 8px;
+}
+
+.search {
+  background-color: #F5F5F5;
+  height: 65%;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.search input {
+  background-color: inherit;
+  border: 0;
+}
+
+.search i {
+  color: #1FAD96;
+}
+
+.search i:hover {
+  cursor: pointer;
 }
 
 /* jumbotron */
