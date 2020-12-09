@@ -1,73 +1,74 @@
 var footer = new Vue({
   el: '#footer',
   data: {
-    address: "",
-    mail: "",
-    social: [
+    address: "382 NE 191 St # 87394 Miami, FL 33179-3899",
+    telephone: "+1(305) 547-9909 (9am - 5pm EST, Monday - Friday)",
+    mail: "support@maxcoach.com",
+    socials: [
       {
         name: "facebook",
         link: "#",
-        icona: ""
+        icona: 'fab fa-facebook-square'
       },
       {
         name: "twitter",
         link: "#",
-        icona: ""
+        icona: 'fab fa-twitter'
       },
       {
         name: "instagram",
         link: "#",
-        icona: ""
+        icona: 'fab fa-instagram'
       },
       {
         name: "linkedin",
         link: "#",
-        icona: ""
+        icona: 'fab fa-linkedin'
       }
     ],
 
     explore: [
       {
-        link_name: "start here",
+        link_name: "Start here",
         link_href: "#"
       },
       {
-        link_name: "blog",
+        link_name: "Blog",
         link_href: "#"
       },
       {
-        link_name: "about us",
+        link_name: "About us",
         link_href: "#"
       },
       {
-        link_name: "success story",
+        link_name: "Success story",
         link_href: "#"
       },
       {
-        link_name: "courses",
+        link_name: "Courses",
         link_href: "#"
       },
       {
-        link_name: "contact us",
+        link_name: "Contact us",
         link_href: "#"
       }
     ],
 
     information: [
       {
-        link_name: "membership",
+        link_name: "Membership",
         link_href: "#"
       },
       {
-        link_name: "purchase guide",
+        link_name: "Purchase guide",
         link_href: "#"
       },
       {
-        link_name: "privacy policy",
+        link_name: "Privacy policy",
         link_href: "#"
       },
       {
-        link_name: "term of services",
+        link_name: "Term of services",
         link_href: "#"
       }
     ]

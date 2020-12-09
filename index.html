@@ -224,18 +224,60 @@
     </div>
 
     <!-- footer -->
-    <div class="footer-background">
+    <div id="footer" class="footer-background">
       <footer class="container_fluid">
 
+        <!-- left -->
         <div class="address">
+          <h2>Address</h2>
+          <p>{{ address }}</p>
+          <p>{{ telephone }}</p>
+          <p>{{ mail }}</p>
 
+          <ul class="socials">
+            <li v-for="social in socials">
+              <a :href="social.link"> <i :class="social.icona"></i> </a>
+            </li>
+          </ul>
         </div>
 
+        <!-- right -->
         <div class="links">
+          <!-- nested left -->
+          <div>
+            <h2>Explore</h2>
+            <div class="explore_links">
+              <ul>
+                <li v-for="link in explore.slice(0, (explore.length / 2 ))">
+                  <a :href="link.link_href">{{ link.link_name }}</a>
+                </li>
+              </ul>
+
+              <ul>
+                <li v-for="link in explore.slice((explore.length / 2 ), (explore.length))">
+                  <a :href="link.link_href">{{ link.link_name }}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- nested right -->
+          <div>
+            <h2>Information</h2>
+            <ul>
+              <li v-for="link in information">
+                <a :href="link.link_href">{{ link.link_name }}</a>
+              </li>
+            </ul>
+          </div>
 
         </div>
 
-        <p>copyright</p>
+        <p class="copyright"><i class="far fa-copyright"></i> Maxcoach. All Rights Reserved</p>
+
+        <!-- fixed-arrow -->
+        <div class="tornaSu">
+          <a href="#"><i class="fas fa-long-arrow-alt-up"></i></a>
+        </div>
 
       </footer>
     </div>

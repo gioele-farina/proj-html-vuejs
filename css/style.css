@@ -10,12 +10,14 @@ html {
 }
 
 .container_fluid {
-  width: 1170px;
+  /* width: 1170px; */
+  width: 1000px;
   margin: auto;
 }
 
 ul li:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 a {
@@ -72,13 +74,14 @@ nav ul li i {
 
 .tendina {
   position: absolute;
-  top: 100%;
+  top: 110%;
   right: 0;
   background-color: white;
   -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
   padding: 5px 8px;
+  border-radius: 5px;
   min-width: 100px;
   text-align: center;
   display: none;
@@ -268,12 +271,96 @@ nav ul li i {
 footer {
   display: flex;
   flex-wrap: wrap;
+  padding: 30px 0 25px 0;
 }
 
 footer .address,
 footer .links {
   width: 50%;
-  min-height: 300px;
+  min-height: 250px;
   /* DEBUG:  */
-  border: 1px solid black;
+  /* border: 1px solid black; */
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  padding: 6px 0;
+}
+
+footer p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #696969;
+  padding: 6px 0;
+}
+
+footer i,
+footer ul li {
+  color: #696969;
+  font-weight: 500;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  padding: 6px 0;
+}
+
+/* left footer */
+.socials {
+  list-style: none;
+  width: 130px;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+/* right footer */
+.links {
+  display: flex;
+}
+
+.links > div {
+  width: 50%;
+}
+
+.explore_links {
+  display: flex;
+  width: 200px;
+}
+
+.explore_links ul {
+  width: 50%;
+}
+
+/* bottom footer */
+.tornaSu {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: #20AD96;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(110,104,110,1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(110,104,110,1);
+  box-shadow: 0px 0px 5px 0px rgba(110,104,110,1);
+}
+.tornaSu i {
+  color: white;
+}
+.tornaSu:hover {
+  cursor: pointer;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: center;
 }
