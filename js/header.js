@@ -1,7 +1,10 @@
 var header = new Vue({
   el: '#header',
   data: {
-    logo: "",
+    // flags
+    tendinaAttiva: false,
+    // dati
+    logo: "assets/images/dark-logo.png",
     navItems: [
       {
         name: "home",
@@ -33,23 +36,23 @@ var header = new Vue({
         links: [
           {
             href: "#",
-            testo: "Link_1"
+            testo: "Link_6"
           },
           {
             href: "#",
-            testo: "Link_2"
+            testo: "Link_7"
           },
           {
             href: "#",
-            testo: "Link_3"
+            testo: "Link_8"
           },
           {
             href: "#",
-            testo: "Link_4"
+            testo: "Link_9"
           },
           {
             href: "#",
-            testo: "Link_5"
+            testo: "Link_10"
           }
         ]
       },
@@ -58,23 +61,23 @@ var header = new Vue({
         links: [
           {
             href: "#",
-            testo: "Link_1"
+            testo: "Link_11"
           },
           {
             href: "#",
-            testo: "Link_2"
+            testo: "Link_12"
           },
           {
             href: "#",
-            testo: "Link_3"
+            testo: "Link_13"
           },
           {
             href: "#",
-            testo: "Link_4"
+            testo: "Link_14"
           },
           {
             href: "#",
-            testo: "Link_5"
+            testo: "Link_15"
           }
         ]
       },
@@ -83,23 +86,23 @@ var header = new Vue({
         links: [
           {
             href: "#",
-            testo: "Link_1"
+            testo: "Link_16"
           },
           {
             href: "#",
-            testo: "Link_2"
+            testo: "Link_17"
           },
           {
             href: "#",
-            testo: "Link_3"
+            testo: "Link_18"
           },
           {
             href: "#",
-            testo: "Link_4"
+            testo: "Link_19"
           },
           {
             href: "#",
-            testo: "Link_5"
+            testo: "Link_20"
           }
         ]
       },
@@ -108,23 +111,23 @@ var header = new Vue({
         links: [
           {
             href: "#",
-            testo: "Link_1"
+            testo: "Link_21"
           },
           {
             href: "#",
-            testo: "Link_2"
+            testo: "Link_22"
           },
           {
             href: "#",
-            testo: "Link_3"
+            testo: "Link_23"
           },
           {
             href: "#",
-            testo: "Link_4"
+            testo: "Link_24"
           },
           {
             href: "#",
-            testo: "Link_5"
+            testo: "Link_25"
           }
         ]
       },
@@ -133,23 +136,23 @@ var header = new Vue({
         links: [
           {
             href: "#",
-            testo: "Link_1"
+            testo: "Link_26"
           },
           {
             href: "#",
-            testo: "Link_2"
+            testo: "Link_27"
           },
           {
             href: "#",
-            testo: "Link_3"
+            testo: "Link_28"
           },
           {
             href: "#",
-            testo: "Link_4"
+            testo: "Link_29"
           },
           {
             href: "#",
-            testo: "Link_5"
+            testo: "Link_30"
           }
         ]
       }
@@ -162,6 +165,12 @@ var header = new Vue({
   })},
 
   methods: {
+    mostraTendina: function(index) {
+      this.tendinaAttiva = index;
+    },
 
+    chiudiTendina: function(index) {
+      this.tendinaAttiva = false;
+    }
   }
 })

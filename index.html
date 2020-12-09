@@ -23,33 +23,51 @@
   <body>
 
     <!-- header -->
-    <header class="container_fluid">
+    <header id="header" class="container_fluid">
 
       <div class="logo">
-
+        <img :src="logo" alt="">
       </div>
 
       <nav>
+
+        <ul>
+          <li v-for="(item, i) in navItems" @click="mostraTendina(i)" >
+            {{ item.name }}
+            <i class="fas fa-angle-down"></i>
+
+            <div :class="['tendina' ,{'active': tendinaAttiva === i}]" @mouseleave="chiudiTendina()">
+              <ul>
+                <li v-for="link in item.links">
+                  <a :href="link.href">{{ link.testo }}</a>
+                </li>
+              </ul>
+            </div>
+
+            </li>
+        </ul>
 
       </nav>
 
     </header>
 
     <!-- jumbotron -->
-    <div id="jumbotron" class="container_fluid">
-      <!-- left -->
-      <aside class="jumbotron-left">
+    <div class="jumbotron-background">
+      <div id="jumbotron" class="container_fluid">
+        <!-- left -->
+        <aside class="jumbotron-left">
 
-      </aside>
-      <!-- right -->
-      <aside class="jumbotron-right">
+        </aside>
+        <!-- right -->
+        <aside class="jumbotron-right">
 
-      </aside>
-      <!-- sponsors -->
-      <div class="sponsors">
+        </aside>
+        <!-- sponsors -->
+        <div class="sponsors">
+
+        </div>
 
       </div>
-
     </div>
 
     <!-- corsi -->
