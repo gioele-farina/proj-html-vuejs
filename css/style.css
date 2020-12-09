@@ -5,4 +5,187 @@
   box-sizing: border-box;
 }
 
+.container_fluid {
+  width: 1170px;
+  margin: auto;
+}
+
 /* fine regole generali */
+
+/* header */
+header {
+  height: 60px;
+  display: flex;
+}
+
+header .logo {
+  height: 100%;
+  width: 20%;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+nav {
+  height: 100%;
+  width: 80%;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+/* jumbotron */
+#jumbotron {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.jumbotron-left {
+  min-height: 350px;
+  width: 50%;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+.jumbotron-right {
+  min-height: 350px;
+  width: 50%;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+.sponsors {
+  min-height: 70px;
+  width: 100%;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+/* corsi */
+.corsi_background {
+  background-color: #F5F7FA;
+}
+
+.corsi_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.corso {
+  width: 50%;
+  min-height: 80px;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+.info-snacks-container {
+  display: flex;
+}
+
+.info-snack {
+  width: calc(100% / 3);
+  min-height: 200px;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+.enjoy_our_companionship {
+  display: flex;
+}
+
+.enjoy_our_companionship .video {
+  width: 60%;
+  min-height: 300px;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+.enjoy_our_companionship .testo {
+  width: 40%;
+  min-height: 300px;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+/* testimonials */
+#testimonials{
+  background-color: #F8F8F8;
+}
+
+.testimonial_container {
+  display: flex;
+}
+
+.testimonial {
+  width: calc(100% / 3);
+  min-height: 250px;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+/* get_started */
+.get_started-background {
+  background-color: #F8F8F8;
+}
+
+#get_started {
+  min-height: 200px;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+/* numbers */
+#numbers {
+  display: flex;
+}
+
+#numbers .data {
+  width: 25%;
+  min-height: 150px;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+/* best blogs */
+.best_blogs_background {
+  background-color: #F5F1ED;
+}
+
+#best_blogs {
+  display: flex;
+}
+
+#best_blogs .testo {
+  width: 40%;
+  min-height: 400px;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+#best_blogs .blog-container {
+  width: 60%;
+  min-height: 400px;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
+
+/* newsletter */
+#newsletter {
+  min-height: 350px;
+}
+
+/* footer */
+.footer-background {
+  background-color: #F8F8F8;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .address,
+footer .links {
+  width: 50%;
+  min-height: 300px;
+  /* DEBUG:  */
+  border: 1px solid black;
+}
