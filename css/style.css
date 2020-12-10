@@ -46,6 +46,7 @@ a {
 
 strong {
   color: #32B49F;
+  font-weight: normal;
 }
 
 h1, h2, h3, p {
@@ -59,7 +60,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  font-weight: 550;
+  font-weight: normal;
   text-align: center;
 }
 
@@ -501,13 +502,69 @@ nav ul li i {
 
 .testimonial_container {
   display: flex;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 30px;
+  position: relative;
 }
 
 .testimonial {
   width: calc(100% / 3);
   min-height: 250px;
+  padding: 30px;
+  margin: 15px;
+  filter: opacity(0.4);
   /* DEBUG:  */
-  border: 1px solid black;
+  /* border: 1px solid black; */
+}
+
+.testimonial.active {
+  filter: opacity(1);
+  background-color: white;
+}
+
+.testimonial_person {
+  display: flex;
+  margin-top: 35px;
+  border-radius: 5px;
+}
+
+.testimonial_person_img {
+  width: 80px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.testimonial_person_img img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.testimonial_person_testo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+}
+.testimonial_person_testo h5 {
+  font-size: 1rem;
+}
+
+.pallini-carousel{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.pallini-carousel .fas.fa-circle {
+  margin: 0 5px;
+  font-size: 8px;
+  color: grey;
+}
+.pallini-carousel .fas.fa-circle.active {
+  margin: 0 5px;
+  font-size: 10px;
+  color: black;
 }
 
 /* get_started */
