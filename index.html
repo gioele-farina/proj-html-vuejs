@@ -17,6 +17,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
+    <!-- font testi -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <title></title>
   </head>
@@ -32,10 +36,10 @@
       <nav>
 
         <ul>
-          <li v-for="(item, i) in navItems" @click="mostraTendina(i)" >
+          <li v-for="(item, i) in navItems" @click="mostraTendina(i)">
             {{ item.name }}
             <i class="fas fa-angle-down"></i>
-
+            <!-- dropdown -->
             <div :class="['tendina' ,{'active': tendinaAttiva === i}]" @mouseleave="chiudiTendina()">
               <ul>
                 <li v-for="link in item.links">
@@ -43,9 +47,9 @@
                 </li>
               </ul>
             </div>
-
-            </li>
+          </li>
         </ul>
+
         <a href="#" class="user"><i class="far fa-user-circle"></i></a>
 
         <div class="search">
@@ -62,11 +66,19 @@
       <div id="jumbotron" class="container_fluid">
         <!-- left -->
         <aside class="jumbotron-left">
-
+          <h1>Distant learning for further expansion</h1>
+          <p>Learning is a life-long journey that in fact we nerver find the terminate stop. Stop searching, enjoy the process.</p>
+          <a class="button tiny"href="#"><i class="fas fa-download"></i> Download free guide</a>
+          <p class="tiny">Have questions? <strong>Get fre sample <i class="fas fa-long-arrow-alt-right"></i></strong></p>
         </aside>
         <!-- right -->
         <aside class="jumbotron-right">
-
+          <div class="img-container">
+            <img class="shape-jumbo1" src="assets/images/maxcoach-shape-08.png" alt="">
+            <img class="shape-jumbo2" src="assets/images/maxcoach-shape-08.png" alt="">
+            <img class="shape-jumbo3" src="assets/images/maxcoach-shape-07.png" alt="">
+            <img class="circle-jumbo" src="assets/images/maxcoach-shape-02.png" alt="">
+          </div>
         </aside>
         <!-- sponsors -->
         <div class="sponsors">
@@ -229,6 +241,7 @@
 
         <!-- left -->
         <div class="address">
+
           <h2>Address</h2>
           <p>{{ address }}</p>
           <p>{{ telephone }}</p>
@@ -239,35 +252,42 @@
               <a :href="social.link"> <i :class="social.icona"></i> </a>
             </li>
           </ul>
+
         </div>
 
         <!-- right -->
         <div class="links">
           <!-- nested left -->
           <div>
+
             <h2>Explore</h2>
             <div class="explore_links">
+              <!-- ul left -->
               <ul>
                 <li v-for="link in explore.slice(0, (explore.length / 2 ))">
                   <a :href="link.link_href">{{ link.link_name }}</a>
                 </li>
               </ul>
-
+              <!-- ul right -->
               <ul>
                 <li v-for="link in explore.slice((explore.length / 2 ), (explore.length))">
                   <a :href="link.link_href">{{ link.link_name }}</a>
                 </li>
               </ul>
+
             </div>
+
           </div>
           <!-- nested right -->
           <div>
+
             <h2>Information</h2>
             <ul>
               <li v-for="link in information">
                 <a :href="link.link_href">{{ link.link_name }}</a>
               </li>
             </ul>
+
           </div>
 
         </div>

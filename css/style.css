@@ -1,6 +1,7 @@
 /* Regole generali */
 html {
   font-size: 15px;
+  font-family: 'Poppins', sans-serif;
 }
 
 * {
@@ -24,6 +25,38 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.button {
+  padding: 8px 15px;
+  background-color: #20AD96;
+  border-radius: 5px;
+  color: white;
+  font-size: bold;
+  margin: 5px 0;
+  display: inline-block;
+}
+.button:hover {
+  background-color: #3F3A64;
+}
+/* font regole generali */
+
+.tiny {
+  font-size: 0.9rem;
+}
+
+strong {
+  color: #32B49F;
+}
+
+h1, h2, h3, p {
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 650;
+}
+
 
 /* fine regole generali */
 
@@ -130,17 +163,57 @@ nav ul li i {
 }
 
 .jumbotron-left {
-  min-height: 350px;
+  /* min-height: 350px; */
   width: 50%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   /* DEBUG:  */
   border: 1px solid black;
 }
 
 .jumbotron-right {
-  min-height: 350px;
+  /* min-height: 350px; */
   width: 50%;
   /* DEBUG:  */
   border: 1px solid black;
+}
+
+.img-container {
+  margin: 0 0 0 auto;
+  width: 450px;
+  height: 450px;
+  background-image: url("../assets/images/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg");
+  background-size: contain;
+  border-radius: 50%;
+  position: relative;
+}
+
+.jumbotron-right .shape-jumbo1 {
+  position: absolute;
+  z-index: -1;
+  left: -12%;
+  top: calc(50% - 140px);
+}
+.jumbotron-right .shape-jumbo2 {
+  position: absolute;
+  z-index: -1;
+  left: -12%;
+  bottom: calc(50% - 140px);
+}
+.jumbotron-right .shape-jumbo3 {
+  position: absolute;
+  z-index: -1;
+  left: 55%;
+  bottom: 10px;
+}
+.jumbotron-right .circle-jumbo {
+  position: absolute;
+  z-index: -1;
+  width: 80px;
+  top: 15%;
+  right: -13%;
 }
 
 .sponsors {
