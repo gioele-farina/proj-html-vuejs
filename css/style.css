@@ -53,12 +53,12 @@ h1, h2, h3, p {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 650;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -73,6 +73,10 @@ h4 {
   font-size: 1.5rem;
 }
 
+h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
 
 /* fine regole generali */
 
@@ -126,6 +130,7 @@ nav ul li i {
   position: absolute;
   top: 110%;
   right: 0;
+  z-index: 1000;
   background-color: white;
   -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
@@ -275,6 +280,11 @@ nav ul li i {
   background-color: #F5F7FA;
 }
 
+#corsi {
+  padding: 25px 0;
+  text-align: center;
+}
+
 .corsi_container {
   display: flex;
   flex-wrap: wrap;
@@ -282,11 +292,74 @@ nav ul li i {
 
 .corso {
   width: 50%;
-  min-height: 80px;
+  min-height: 100px;
+  display: flex;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 5px;
   /* DEBUG:  */
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
+.corso:hover {
+  background-color: white;
+}
+
+.corso_img {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  /* DEBUG:  */
+  /* border: 1px solid black; */
+}
+
+#corsi .button {
+  margin: 20px 0;
+}
+
+.corso_img.img1 {
+  background-image: url(../assets/images/course-02-480x298.jpg);
+}
+.corso_img.img2 {
+  background-image: url(../assets/images/stock-full-hd-03-480x298.jpg);
+}
+.corso_img.img3 {
+  background-image: url(../assets/images/stock-full-hd-04-480x298.jpg);
+}
+.corso_img.img4 {
+  background-image: url(../assets/images/stock-full-hd-06-480x298.jpg);
+}
+.corso_img.img5 {
+  background-image: url(../assets/images/course-featured-image-01-480x298.jpg);
+}
+.corso_img.img6 {
+  background-image: url(../assets/images/stock-full-hd-05-480x298.jpg);
+}
+
+.corso-content {
+  text-align: left;
+  flex-grow: 1;
+  padding: 5px 15px 5px 25px;
+}
+
+.corso-content strong:last-child {
+  font-size: 1.2rem;
+}
+
+.lessons-stutends {
+  font-size: 0.8rem;
+  color: #8C93BE;
+  margin-top: 20px
+}
+
+.lessons-stutends i:last-child {
+  margin-left: 15px;
+}
+
+/* more info */
 .info-snacks-container {
   display: flex;
 }
