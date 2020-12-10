@@ -12,7 +12,7 @@ html {
 
 .container_fluid {
   /* width: 1170px; */
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -371,6 +371,20 @@ nav ul li i {
   padding: 60px 0;
 }
 
+.more_info_background {
+  position: relative;
+}
+
+.background-bottom-ricurvo {
+  position: absolute;
+  z-index: -2;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  min-width: 800px;
+  height: auto;
+}
+
 .info-snacks-container {
   display: flex;
 }
@@ -401,7 +415,7 @@ nav ul li i {
   min-height: 200px;
   position: relative;
   /* DEBUG:  */
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .enjoy_our_companionship .video .video_preview {
@@ -429,7 +443,6 @@ nav ul li i {
   z-index: -1;
   max-width: 30%;
 }
-
 .enjoy-shape-2 {
   position: absolute;
   right: -20px;
@@ -437,13 +450,29 @@ nav ul li i {
   z-index: -1;
   max-width: 25%;
 }
+.enjoy-shape-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-40%, -40%);
+  z-index: -2;
+  max-width: 30%;
+}
+.enjoy-shape-4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(+120%, -70%);
+  z-index: -1;
+  max-width: 15%;
+}
 
 .enjoy_our_companionship .testo {
   width: 45%;
   min-height: 200px;
   padding: 30px 30px 30px 45px;
   /* DEBUG:  */
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .enjoy_our_companionship h3 {
