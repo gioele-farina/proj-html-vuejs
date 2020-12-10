@@ -92,10 +92,10 @@
       </div>
       <!-- mini aside right -->
       <aside class="aside-right">
-        <i class="fas fa-ruler"></i>
-        <i class="fas fa-bullseye"></i>
-        <i class="fas fa-book"></i>
-        <i class="fas fa-shopping-cart"></i>
+        <a href="#"><i class="fas fa-ruler"></i></a>
+        <a href="#"><i class="fas fa-bullseye"></i></a>
+        <a href="#"><i class="fas fa-book"></i></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
       </aside>
     </div>
 
@@ -131,7 +131,7 @@
           </div>
         </div>
 
-        <a href="#">View all courses --></a>
+        <a class="tiny button" href="#">View all courses  <i class="fas fa-long-arrow-alt-right"></i></a>
       </div>
     </div>
 
@@ -253,7 +253,7 @@
         <!-- left -->
         <div class="address">
 
-          <h2>Address</h2>
+          <h4>Address</h4>
           <p>{{ address }}</p>
           <p>{{ telephone }}</p>
           <p>{{ mail }}</p>
@@ -271,7 +271,7 @@
           <!-- nested left -->
           <div>
 
-            <h2>Explore</h2>
+            <h4>Explore</h4>
             <div class="explore_links">
               <!-- ul left -->
               <ul>
@@ -292,7 +292,7 @@
           <!-- nested right -->
           <div>
 
-            <h2>Information</h2>
+            <h4>Information</h4>
             <ul>
               <li v-for="link in information">
                 <a :href="link.link_href">{{ link.link_name }}</a>
@@ -303,7 +303,7 @@
 
         </div>
 
-        <p class="copyright"><i class="far fa-copyright"></i> Maxcoach. All Rights Reserved</p>
+        <p class="copyright"><i class="far fa-copyright"></i> {{ copyright }}</p>
 
         <!-- fixed-arrow -->
         <div class="tornaSu">
