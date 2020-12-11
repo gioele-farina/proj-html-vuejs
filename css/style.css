@@ -729,8 +729,58 @@ nav ul li i {
 
 /* newsletter */
 #newsletter {
+  padding: 60px 200px;
   min-height: 350px;
+  text-align: center;
+  position: relative;
 }
+
+.subscribe-form {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.subscribe-form input {
+  width: 100%;
+  background-color: #F5F5F5;
+  padding: 5px 25px;
+  border: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.button.special {
+  border-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0;
+  padding: 15px 20px;
+}
+
+
+.newsletter_decoratio_1 {
+  position: absolute;
+  top: calc(50% - 0px);
+  left: 0;
+  transform: translate(-100%, 0);
+  max-width: 50px;
+}
+.newsletter_decoratio_2 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  transform: translate(+25%, 0);
+  max-width: 150px;
+}
+.newsletter_decoratio_3 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  transform: translate(+40%, +100%);
+  max-width: 100px;
+}
+
 
 /* footer */
 .footer-background {
