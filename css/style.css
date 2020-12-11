@@ -657,6 +657,7 @@ nav ul li i {
 #best_blogs .testo {
   width: calc(100% / 3);
   min-height: 400px;
+  padding: 20px;
   /* DEBUG:  */
   border: 1px solid black;
 }
@@ -664,8 +665,27 @@ nav ul li i {
 #best_blogs .blog {
   width: calc(100% / 3);
   min-height: 400px;
+  padding: 20px;
   /* DEBUG:  */
   border: 1px solid black;
+}
+
+#best_blogs h3,
+#best_blogs h2,
+#best_blogs p {
+  text-align: left;
+}
+
+#best_blogs .testo p {
+  color: black;
+}
+#best_blogs .testo i {
+  margin: 10px 10px 0 0;
+}
+
+#best_blogs .testo > div {
+  display: flex;
+  align-items: baseline;
 }
 
 /* newsletter */
