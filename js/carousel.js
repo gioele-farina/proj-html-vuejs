@@ -24,7 +24,7 @@ var carousel = new Vue({
       },
       // testimonial3
       {
-        titolo: "Esempio 4",
+        titolo: "Esempio",
         testo: "Mi piace mangiare lasagne.",
         foto: "assets/images/testimonial-avata-01.jpg",
         chiSono: "TIZIO QUALUNQUE",
@@ -38,6 +38,14 @@ var carousel = new Vue({
         chiSono: "FLORENCE THEMES",
         cosaFaccio: "/Multimedia Admin"
       }
+
+      // {
+      //   titolo: "5 I'ts a choice of quality for people with special needs",
+      //   testo: "I'm very strict person so I require everything to be organized and neat. Then, I'll ve alble to make things right and shine. MaxCoach guys just got me.",
+      //   foto: "assets/images/testimonial-avata-03.jpg",
+      //   chiSono: "FLORENCE THEMES",
+      //   cosaFaccio: "/Multimedia Admin"
+      // }
     ]
   },
 
@@ -75,8 +83,25 @@ var carousel = new Vue({
         this.testimonialVisible2 = 0;
       } else if (this.testimonialVisible1 === (this.testimonials.length - 1)) {
         this.testimonialVisible1 = 0;
-        this.testimonialVisible2++;
+        this.testimonialVisible2 = (this.testimonialVisible1 + 1);
+      }
+    },
+
+    navigazionePallini: function(index){
+      if (index !== 0 && index !== (this.testimonials.length - 1)) {
+        this.testimonialVisible1 = index;
+        this.testimonialVisible2 = (this.testimonialVisible1 + 1);
+        this.testimonialVisible3 = (this.testimonialVisible1 - 1);
+      } else if (index === 0) {
+        this.testimonialVisible1 = index;
+        this.testimonialVisible2 = 1;
+        this.testimonialVisible3 = (this.testimonials.length - 1);
+      } else if (index === (this.testimonials.length - 1)) {
+        this.testimonialVisible1 = index;
+        this.testimonialVisible2 = 0;
+        this.testimonialVisible3 = (this.testimonialVisible1 - 1);
       }
     }
+
   }
 })
