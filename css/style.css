@@ -31,7 +31,7 @@ a {
   background-color: #20AD96;
   border-radius: 5px;
   color: white;
-  font-size: bold;
+  font-weight: bold;
   margin: 5px 0;
   display: inline-block;
 }
@@ -579,8 +579,38 @@ nav ul li i {
 
 #get_started {
   min-height: 200px;
+  text-align: center;
+  padding: 20px 80px 70px 80px;
+  position: relative;
   /* DEBUG:  */
-  border: 1px solid black;
+  /* border: 1px solid black; */
+}
+
+#get_started h2:first-child {
+  font-size: 1.1rem;
+}
+
+.get_started_decoration1 {
+  position: absolute;
+  bottom: 50%;
+  right: 0px;
+  transform: translate(+50%, +80%);
+  max-width: 80px;
+}
+
+.get_started_decoration2 {
+  position: absolute;
+  bottom: 50%;
+  left: 0px;
+  transform: translate(0, +100%);
+  max-width: 100px;
+}
+
+.get_started_decoration3 {
+  position: absolute;
+  bottom: 50%;
+  left: 0px;
+  max-width: 40px;
 }
 
 /* numbers */
