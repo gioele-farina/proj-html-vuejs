@@ -269,60 +269,68 @@
       <h3>Great words about Maxcoach</h3>
       <h2>Our <strong>top learners'</strong> verbatim</h2>
 
-      <div class="testimonial_container">
+      <div id="testimonialCarousel" class="testimonial_container">
+        <!-- questo testimonial è il precedente o l'ultimo se assente -->
         <div class="testimonial">
           <div class="testimonial_person_testo">
-            <h5>I'ts a choice of quality for people with special needs</h5>
-            <p>I'm very strict person so I require everything to be organized and neat. Then, I'll ve alble to make things right and shine. MaxCoach guys just got me.</p>
+            <h5>{{ testimonials[testimonialVisible3].titolo }}</h5>
+            <p>{{ testimonials[testimonialVisible3].testo }}</p>
           </div>
           <div class="testimonial_person">
             <div class="testimonial_person_img">
-              <img src="assets/images/testimonial-avata-03.jpg" alt="">
+              <img :src="testimonials[testimonialVisible3].foto" alt="">
             </div>
             <div class="testimonial_person_testo">
-              <h5>FLORENCE THEMES</h5>
-              <p class="tiny">/Multimedia Admin</p>
+              <h5>{{ testimonials[testimonialVisible3].chiSono }}</h5>
+              <p class="tiny">{{ testimonials[testimonialVisible3].cosaFaccio }}</p>
             </div>
+          </div>
+
+          <div class="freccia freccia-sinistra" @click="scorriSinistra">
+            <i class="fas fa-chevron-left"></i>
           </div>
         </div>
 
+        <!-- questo è il testimonial attivo -->
         <div class="testimonial active">
           <div class="testimonial_person_testo">
-            <h5>High level of efficiency and scientific teaching methods</h5>
-            <p>I am free to learn at my own pace, follow my own schedule and choose the subject I want lo learn from the syllabus. Great study portal for people like me.</p>
+            <h5>{{ testimonials[testimonialVisible1].titolo }}</h5>
+            <p>{{ testimonials[testimonialVisible1].testo }}</p>
           </div>
           <div class="testimonial_person">
             <div class="testimonial_person_img">
-              <img src="assets/images/testimonial-avata-02.jpg" alt="">
+              <img :src="testimonials[testimonialVisible1].foto" alt="">
             </div>
             <div class="testimonial_person_testo">
-              <h5>MINA HOLLACE</h5>
-              <p class="tiny">/Freelancer</p>
+              <h5>{{ testimonials[testimonialVisible1].chiSono }}</h5>
+              <p class="tiny">{{ testimonials[testimonialVisible1].cosaFaccio }}</p>
             </div>
           </div>
         </div>
 
+        <!-- questo è il testimonial successivo -->
         <div class="testimonial">
           <div class="testimonial_person_testo">
-            <h5>Professional team of specialists and passionate mentors at reach</h5>
-            <p>I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.</p>
+            <h5>{{ testimonials[testimonialVisible2].titolo }}</h5>
+            <p>{{ testimonials[testimonialVisible2].testo }}</p>
           </div>
           <div class="testimonial_person">
             <div class="testimonial_person_img">
-              <img src="assets/images/testimonial-avata-04.jpg" alt="">
+              <img :src="testimonials[testimonialVisible2].foto" alt="">
             </div>
             <div class="testimonial_person_testo">
-              <h5>MADLEY PONDOR</h5>
-              <p class="tiny">/IT Specialist</p>
+              <h5>{{ testimonials[testimonialVisible2].chiSono }}</h5>
+              <p class="tiny">{{ testimonials[testimonialVisible2].cosaFaccio }}</p>
             </div>
+          </div>
+
+          <div class="freccia freccia-destra" @click="scorriDestra">
+            <i class="fas fa-chevron-right"></i>
           </div>
         </div>
 
         <div class="pallini-carousel">
-          <i class="active fas fa-circle"></i>
-          <i class="fas fa-circle"></i>
-          <i class="fas fa-circle"></i>
-          <i class="fas fa-circle"></i>
+          <i v-for="(pallino, i) in testimonials.length" :class="['fas fa-circle' ,{'active': pallinoAttivo === i}]"></i>
         </div>
       </div>
 
@@ -497,6 +505,7 @@
     </div>
 
   <script type="text/javascript" src="js/header.js"></script>
+  <script type="text/javascript" src="js/carousel.js"></script>
   <script type="text/javascript" src="js/footer.js"></script>
   </body>
 </html>
