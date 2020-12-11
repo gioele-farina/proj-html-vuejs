@@ -25,7 +25,12 @@ var footer = new Vue({
         name: "linkedin",
         link: "#",
         icona: 'fab fa-linkedin'
-      }
+      }//,
+      // { //Prova aggiunta altro social
+      //   name: "linkedin",
+      //   link: "#",
+      //   icona: 'fab fa-linkedin'
+      // }
     ],
 
     explore: [

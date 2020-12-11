@@ -155,7 +155,32 @@ var header = new Vue({
             testo: "Link_30"
           }
         ]
-      }
+      }//,
+      // { //Prova aggiunta dinamica
+      //   name: "ciao",
+      //   links: [
+      //     {
+      //       href: "#",
+      //       testo: "Link_26"
+      //     },
+      //     {
+      //       href: "#",
+      //       testo: "Link_27"
+      //     },
+      //     {
+      //       href: "#",
+      //       testo: "Link_28"
+      //     },
+      //     {
+      //       href: "#",
+      //       testo: "Link_29"
+      //     },
+      //     {
+      //       href: "#",
+      //       testo: "Link_30"
+      //     }
+      //   ]
+      // }
     ]
   },
 
